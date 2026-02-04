@@ -3,7 +3,6 @@ import requests
 from rich import print
 from bs4 import BeautifulSoup 
 
-#url = "https://en.wikipedia.org/wiki/Aaron_Swartz"
 url = input("url -> ")
 
 c = webbrowser.get('firefox')
