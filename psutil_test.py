@@ -9,7 +9,7 @@ print(psutil.cpu_freq(), end="\n\n")
 print(psutil.getloadavg(), end="\n\n")
 print("virtual memory:", psutil.virtual_memory(), end="\n\n")
 print("disk partitions:", psutil.disk_partitions(), end="\n\n")
-print("disk usage:", psutil.disk_usage('/run/media/Xashe/USB_DATA'), end="\n\n")
+print("disk usage:", psutil.disk_usage("/boot/efi"), end="\n\n")
 
 print(psutil.net_io_counters(), end="\n\n")
 
